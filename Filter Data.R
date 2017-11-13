@@ -11,4 +11,4 @@ State_description <- bill %>%
   filter(Category =="Health Outcomes")%>%
   arrange(desc(PopulationCount))%>%
   group_by(Measure,CityName,Year)%>%
-  summarise(sum=sum(PopulationCount)).
+  summarise(sum=sum(PopulationCount))
