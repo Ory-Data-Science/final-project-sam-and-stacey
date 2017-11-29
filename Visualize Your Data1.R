@@ -13,7 +13,7 @@ State_description <- bill %>%
   filter(Year == 2014)%>%
   mutate(PopulationCount, PopIncidence = Data_Value * PopulationCount * 0.01)%>%
   group_by(CityName, Measure, Year)%>%
-  summarise(IncidenceRate=sum(PopIncidence, na.rm = TRUE), Incidence = IncidenceRate/sum(PopulationCount))
+  summarise(IncidenceRate=sum(PopIncidence, na.rm = TRUE), Incidence = 100*IncidenceRate/sum(PopulationCount))
 
 
 
