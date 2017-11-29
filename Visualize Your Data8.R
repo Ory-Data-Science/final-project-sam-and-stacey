@@ -23,4 +23,4 @@ State_description <- bill %>%
 View(State_description)
 View(bill)
 s <- ggplot(State_description,aes(CityName,Incidence))
-s + ggtitle("Diagnosed diabetes among adults aged >=18 Years")+ geom_col()
+s + ggtitle("Diagnosed diabetes among adults aged >=18 Years")+  coord_flip() + geom_col()
