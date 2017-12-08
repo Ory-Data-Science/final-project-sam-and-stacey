@@ -13,7 +13,7 @@ State_description <- bill %>%
   filter(Year == 2014)%>%
   mutate(PopulationCount, PopIncidence = Data_Value * PopulationCount * 0.01)%>%
   group_by(CityName, Measure, Year)%>%
-  summarise(IncidenceRate=sum(PopIncidence, na.rm = TRUE), 100*Incidence = IncidenceRate/sum(PopulationCount))
+  summarise(IncidenceRate=sum(PopIncidence, na.rm = TRUE), Incidence = 100*IncidenceRate/sum(PopulationCount))
 
 
 
@@ -22,5 +22,5 @@ State_description <- bill %>%
 
 View(State_description)
 View(bill)
-s <- ggplot(State_description,aes(CityName,Incidence))
-s + ggtitle("Coronary heart disease among adults aged >=18 Years")+  coord_flip() + geom_col()
+s <- ggplot(State_description,aes(x=CityName,y=Incidence,fill=CityName))
+s + ggtitle("Coronary heart disease among adults aged >=18 Years")+  coord_flip() + geom_col() +  scale_fill_manual(values=c("black", "black","gold","black","gold","black","black","gold","black","black","black","black","black","gold","gold","black","gold","black"))
