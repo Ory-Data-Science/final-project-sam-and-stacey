@@ -22,5 +22,5 @@ State_description <- bill %>%
 
 View(State_description)
 View(bill)
-s <- ggplot(State_description,aes(CityName,Incidence,fill=CityName))
+s <- ggplot(State_description,aes(x=CityName,y=Incidence,fill=CityName))
 s + ggtitle("All teeth lost among adults aged >=65 Years")+  coord_flip() + geom_col()+ scale_fill_manual(values=c("gold", "gold","dodgerblue4","gold","dodgerblue4","gold","gold","dodgerblue4","gold","gold","gold","gold","gold","dodgerblue4","dodgerblue4","gold","dodgerblue4","gold"))
