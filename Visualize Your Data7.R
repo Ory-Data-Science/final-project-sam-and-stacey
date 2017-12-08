@@ -23,4 +23,4 @@ State_description <- bill %>%
 View(State_description)
 View(bill)
 s <- ggplot(State_description,aes(x=CityName,y=Incidence,fill=CityName))
-s + ggtitle("Current asthma among adults aged >=18 Years")+ coord_flip()+ geom_col() + scale_fill_manual(values=c("green", "green","yellow","green","yellow","green","green","yellow","green","green","green","green","green","yellow","yellow","green","yellow","green"))
+s + ggtitle("Current asthma among adults aged >=18 Years")+ coord_flip()+ geom_col() + scale_fill_manual(values=c("green", "green","purple","green","purple","green","green","purple","green","green","green","green","green","purple","purple","green","purple","green"))
