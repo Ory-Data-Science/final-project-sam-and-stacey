@@ -22,5 +22,5 @@ State_description <- bill %>%
 
 View(State_description)
 View(bill)
-s <- ggplot(State_description,aes(CityName,Incidence))
-s + ggtitle("Chronic kidney disease among adults aged >=18 Years")+  coord_flip() + geom_col()
+s <- ggplot(State_description,aes(x=CityName,y=Incidence,fill=CityName))
+s + ggtitle("Chronic kidney disease among adults aged >=18 Years")+  coord_flip() + geom_col()+ scale_fill_manual(values=c("cornsilk1", "cornsilk1","coral2","cornsilk1","coral2","cornsilk1","cornsilk1","coral2","cornsilk1","cornsilk1","cornsilk1","cornsilk1","cornsilk1","coral2","coral2","cornsilk1","coral2","cornsilk1"))
