@@ -22,5 +22,5 @@ State_description <- bill %>%
 
 View(State_description)
 View(bill)
-s <- ggplot(State_description,aes(CityName,Incidence))
-s + ggtitle("Arthritis among adults aged >=18 Years")+  coord_flip() + geom_col()
+s <- ggplot(State_description,aes(CityName,Incidence,Incidence,fill=CityName))
+s + ggtitle("Arthritis among adults aged >=18 Years")+  coord_flip() + geom_col()+ scale_fill_manual(values=c("aquamarine2", "aquamarine2","pink3","aquamarine2","pink3","aquamarine2","aquamarine2","pink3","aquamarine2","aquamarine2","aquamarine2","aquamarine2","aquamarine2","pink3","pink3","aquamarine2","pink3","aquamarine2"))
