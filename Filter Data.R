@@ -8,7 +8,7 @@ print(bill)
 State_description <- bill %>%
   select(Year, StateAbbr, StateDesc, CityName,PopulationCount, Category, Measure, Short_Question_Text, Data_Value_Type, Data_Value, Low_Confidence_Limit,High_Confidence_Limit)%>%
   filter(StateAbbr =="IL")%>%
-  filter(Category =="Health Outcomes")%>%
-  #arrange(desc(PopulationCount))%>%
+  filter(Category =="Health Outcomes")
+  #%>% arrange(desc(PopulationCount))%>%
   #group_by(Measure,CityName)%>%
   #summarise(sum=sum(PopulationCount))

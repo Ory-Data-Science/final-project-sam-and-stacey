@@ -1,4 +1,3 @@
-setwd("~/Intro to Data Science/Project/data")
 
 library(tidyverse)
 library("dplyr")
