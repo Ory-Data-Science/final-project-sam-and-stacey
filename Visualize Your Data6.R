@@ -24,3 +24,4 @@ View(State_description)
 View(bill)
 s <- ggplot(State_description,aes(x=CityName,y=Incidence,fill=CityName))
 s + ggtitle("Stroke among adults aged >=18 Years")+  coord_flip() + geom_col()+ scale_fill_manual(values=c("orange", "orange","black","orange","black","orange","orange","black","orange","orange","orange","orange","orange","black","black","orange","black","orange"))
+  
